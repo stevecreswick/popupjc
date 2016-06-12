@@ -1,0 +1,60 @@
+<div class="post-list">
+  <div class="row">
+    <% @blogs.each_with_index do |blog, index| %>
+      <% if index == 0 %>
+        <a href="/blogs/<%= blog.id %>">
+          <div class="col s12 featured-post">
+            <div class="featured-image-container">
+              <img src="<%= blog.header_image %>" alt="" />
+            </div>
+            <h2 class="post-title">
+              <%= blog.title %>
+              <div class="post-date">
+                <%= blog.created_at.strftime("%B %d, %Y") %>
+              </div>
+            </h2>
+            <h6 class="post-tagline">
+              <%= blog.tagline %>
+            </h5>
+          </div>
+        </a>
+
+      <% elsif index > 0 && index % 2 != 0 %>
+        <a href="/blogs/<%= blog.id %>">
+          <div class="col s12 m6 post">
+            <div class="blog-image-container">
+              <img src="<%= blog.header_image %>" />
+            </div>
+            <h2 class="post-title">
+              <%= blog.title %>
+              <div class="post-date">
+                <%= blog.created_at.strftime("%B %d, %Y") %>
+              </div>
+            </h2>
+            <h6 class="post-tagline">
+              <%= blog.tagline %>
+            </h5>
+          </div>
+        </a>
+
+      <% elsif index > 0 && index % 2 == 0 %>
+        <a href="/blogs/<%= blog.id %>">
+          <div class="col s12 m6 post">
+            <div class="blog-image-container">
+              <img src="<%= blog.header_image %>" />
+            </div>
+            <h2 class="post-title">
+              <%= blog.title %>
+              <div class="post-date">
+                <%= blog.created_at.strftime("%B %d, %Y") %>
+              </div>
+            </h2>
+            <h6 class="post-tagline">
+              <%= blog.tagline %>
+            </h5>
+          </div>
+        </a>
+      <% end %>
+    <% end %>
+  </div>
+</div>
