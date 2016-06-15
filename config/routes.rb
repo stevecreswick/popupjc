@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   # get 'blog/create' => 'blog#new'
   resources :blogs
 
+  get '/admin' => 'blogs#index'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

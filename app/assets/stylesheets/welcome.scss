@@ -3,3 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import "materialize";
+
+
+.nav-wrapper {
+  background-color: #fff;
+
+  .brand-logo {
+    color: black;
+  }
+}
