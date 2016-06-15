@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MinimalisticTravel</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div class="navbar">
+  <nav>
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo">&nbsp; PopUp JC</a>
+      <ul class="right hide-on-med-and-down">
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container">
+  <%= yield %>
+</div>
+</body>
+</html>

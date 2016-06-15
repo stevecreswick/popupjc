@@ -1,0 +1,21 @@
+<div class="post-list">
+  <div class="row">
+    <% @blogs.each_with_index do |blog, index| %>
+        <a href="/blogs/<%= blog.id %>">
+          <div class="col s12 featured-post">
+            <% if blog.header_image %>
+              <div class="featured-image-container">
+                <img src="<%= blog.header_image %>" alt="" />
+              </div>
+            <% end%>
+            <h2 class="post-title">
+              <%= blog.title %>
+              <div class="post-date">
+                <%= blog.created_at.strftime("%B %d, %Y") %>
+              </div>
+            </h2>
+          </div>
+        </a>
+    <% end %>
+  </div>
+</div>
